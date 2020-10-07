@@ -1,6 +1,6 @@
 <template>
     <!-- Begin page content -->
-    <div class="flex-shrink-0 main-container pb-0">
+    <div class="flex-shrink-0 main-container pb-0 mt-5">
           <div class="mt-0">
             <img class="topimg" src="@/assets/img/topimg3.png">
           </div>
@@ -22,7 +22,7 @@
           </div>
 
           <MainPageCategory></MainPageCategory>
-
+     
           <CarosoulOfItemsComponent backgroundCard='#fff'></CarosoulOfItemsComponent>
 
           <CarosoulOfItemsComponent title="آخرین تخفیف ها" backgroundCard='#d5fbfe'></CarosoulOfItemsComponent>
@@ -94,13 +94,13 @@ export default {
       ],
       baseW: 360,
       baseH: 160,
-      newWidth: window.innerWidth,
+      newWidth: window.innerWidth
     }
   },
   computed: {
     hooperHeight: function(){
       return (this.newWidth * this.baseH) / this.baseW
     }
-  },
+  }
 }
 </script>

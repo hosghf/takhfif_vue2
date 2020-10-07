@@ -99,7 +99,7 @@ export default {
 
 <style scoped>
 .hooper{
-  height: 290px;
+  height: 250px;
   padding: 2px;
 }
 .card-of-main-pg{

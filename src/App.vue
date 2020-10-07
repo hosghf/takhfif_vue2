@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <div class="row mt-4"></div>
-    <div class="mt-5" v-on:click="closeMenu">
+    <div class="" v-on:click="closeMenu">
       <router-view />
       <SideMenu></SideMenu>
     </div>

@@ -17,7 +17,7 @@
     </div>
     <div class="list-group main-menu my-4">
       <router-link to="/" class="list-group-item list-group-item-action active"><i class="material-icons">home</i>خانه</router-link>
-      <router-link to="/test" class="list-group-item list-group-item-action"><i class="material-icons">view_day</i>تست</router-link>
+      <router-link to="/takhfifPage" class="list-group-item list-group-item-action"><i class="material-icons">view_day</i>تخفیف </router-link>
       <a href="orders.html" class="list-group-item list-group-item-action"><i class="material-icons">insert_emoticon</i>Orders</a>
       <a href="notification.html" class="list-group-item list-group-item-action"><i class="material-icons">notifications</i>Notification <span class="badge badge-dark text-white">2</span></a>
       <a href="setting.html" class="list-group-item list-group-item-action"><i class="material-icons">account_circle</i>Setting</a>
