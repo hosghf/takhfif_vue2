@@ -9,17 +9,19 @@
             </span>
         </div>
         <span class="text-success mx-3 discount" :class="{discountMedium: isMedium()}">
-            58/000
+            {{secondPrice}}
         </span>
-        <span class="text-muted ml-3 price"><del>
-            20000 </del>
+        <span class="text-muted ml-3 price">
+            <del>
+                {{firstPrice}}
+            </del>
         </span>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['percent' , 'medium'],
+    props: ['percent' , 'medium', "firstPrice", "secondPrice"],
     methods: {
         isMedium: function(){
             if(this.medium == 1){
@@ -47,8 +49,8 @@ export default {
     font-size: 10px;
 }
 .medium{
-    font-size: 0.9rem;
-    height: 24px;
+    font-size: 0.85rem;
+    height: 22px;
     width: 66px;
     padding: 1.5px 2px;
 }
@@ -57,7 +59,7 @@ export default {
     font-weight: bold;
 }
 .discountMedium {
-    font-size: 16px;
+    font-size: 15.5px;
     font-weight: bold;
 }
 .price{

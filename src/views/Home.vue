@@ -23,11 +23,13 @@
 
           <MainPageCategory></MainPageCategory>
      
-          <CarosoulOfItemsComponent backgroundCard='#fff'></CarosoulOfItemsComponent>
+          <CarosoulOfItemsComponent backgroundColor='#fff'></CarosoulOfItemsComponent>
 
-          <CarosoulOfItemsComponent title="آخرین تخفیف ها" backgroundCard='#d5fbfe'></CarosoulOfItemsComponent>
+          <CarosoulOfItemsComponent title="آخرین تخفیف ها" backgroundColor='#d5fbfe'></CarosoulOfItemsComponent>
 
-          <CarosoulOfItemsComponent title="تخفیف های ویژه" backgroundCard='#ffe5d6'></CarosoulOfItemsComponent>
+          <CarosoulOfItemsComponent title="تخفیف های ویژه" backgroundColor='#ffe5d6'></CarosoulOfItemsComponent>
+          
+          <div class="bottom-space"></div>
     </div>
 </template>
 
@@ -60,6 +62,10 @@
   }
 .hooper-indicator:hover, .hooper-indicator.is-active {
     background-color: #dc3545 !important;
+}
+.bottom-space{
+  margin-bottom: 10px;
+  height: 30px;
 }
 </style>
 

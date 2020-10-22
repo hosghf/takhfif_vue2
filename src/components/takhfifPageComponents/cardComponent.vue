@@ -6,7 +6,7 @@
                 <img :class="{rotate: display}" src="@/assets/img/up-chevron.png">
             </span>
         </div>
-        <div class="body my-2 p-2" :class="{display: display}">
+        <div class="body my-2 p-2" :class="{display: display}" transition="fade">
             <slot></slot>
         </div>
     </div>
@@ -31,6 +31,7 @@ export default {
 <style scoped>
     .display{
         display: none;
+        transition: all 1s ease;
     }
     .rotate{
         -ms-transform: rotate(180deg); /* IE 9 */

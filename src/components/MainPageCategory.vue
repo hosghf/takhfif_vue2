@@ -1,27 +1,25 @@
 <template>
     <div class="container-fluid">
         <h6 class="page-subtitle mr-1"> دسته بندی ها</h6>
-        <!-- <div class="row"> -->
-              <hooper rtl infinite-scroll :settings="hooperSettings">
-                <slide v-for="slide in slides" v-bind:key="slide.id">
-                  <a href="#">
-                    <div class='square-box p-3' :style="'background:' + slide.background">
-                        <div class='square-content'>
-                          <img :src="slide.icon">
-                          <p class="cat-text">{{slide.title}}</p>
-                        </div>
+          <hooper rtl infinite-scroll :settings="hooperSettings">
+            <slide v-for="slide in slides" v-bind:key="slide.id">
+              <a href="#">
+                <div class='square-box p-3' :style="'background:' + slide.background">
+                    <div class='square-content'>
+                      <img :src="slide.icon">
+                      <p class="cat-text">{{slide.title}}</p>
                     </div>
-                  </a>
-                </slide>
-              </hooper>
-        <!-- </div>          -->
+                </div>
+              </a>
+            </slide>
+          </hooper>
     </div>
 </template>
 
 <style scoped>
 .container-fluid{
   padding-left: 0;
-  margin-bottom: 33px;
+  margin-bottom: 13px;
   margin-top:23px;
 }
 .hooper{
