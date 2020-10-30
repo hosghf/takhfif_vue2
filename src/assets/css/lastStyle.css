@@ -7,6 +7,10 @@ body{
 .main-slide > .card{
     height: 250px;
 }
+.page-subtitle{
+    font-weight: bold;
+    padding-bottom: 0;
+}
 
 /*vazir font*/
 

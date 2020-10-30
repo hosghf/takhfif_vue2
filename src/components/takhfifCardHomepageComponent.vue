@@ -1,8 +1,9 @@
 <template>
-    <div class="card2 ml-4" v-bind:style="{ background: backgroundColor }">
+    <div class="card2 ml-4" v-bind:style="{ background: backgroundColor }" :class="{card2TakhfifVije: takhfifVije}">
+            
         <div class="background2" :style="'background: url( '+ backgroundImg + ');   background-size: cover;'">
             <div class="row top-section">
-                <div class="star">
+                <div class="star" v-if="!takhfifVije">
                     <i class="material-icons">star</i>
                     <span>{{star}}</span>
                 </div>
@@ -12,11 +13,19 @@
                     <i class="material-icons">cached</i>
                 </div>
             </div>
+            
+            <div class="location" v-if="takhfifVije">
+                <i class="material-icons">room</i>
+                <span>
+                    {{location}}
+                </span>
+            </div>
+
         </div>
-        <div class="percent">
+        <div class="percent" :class="{percentTakhfifVije : takhfifVije}" :style="percentShadow">
             %{{percent}}
         </div>
-        <div class="location">
+        <div class="location" v-if="!takhfifVije">
             <i class="material-icons">room</i>
             <span>
                 {{location}}
@@ -24,6 +33,10 @@
         </div>
         <div class="title">
             <h6>
+                <div class="star" v-if="takhfifVije">
+                    <i class="material-icons">star</i>
+                    <span>{{star}}</span>
+                </div>
                 {{title}}
             </h6>
         </div>
@@ -52,7 +65,12 @@ export default {
         }
     },
     props: ["title", "star", "location", "backgroundImg",
-                 "refund", "oldprice", "newprice", "percent", "backgroundColor"]
+                 "refund", "oldprice", "newprice", "percent", "backgroundColor", "takhfifVije"],
+    computed: {
+        percentShadow() {
+            return 'box-shadow: 0 0 0 3.5px ' + this.backgroundColor
+        }
+    }
 }
 </script>
 
@@ -63,12 +81,14 @@ h6{
 }
 .card2{
     width: 100%;
-    height: 246px;
+    /* height: 246px; */
+    height: auto;
     background: #fff;
     padding: 8px;
     border-radius: 15px;
     box-shadow: 0px 0px 6px 0px #ccc;
     position: relative;
+    margin-top: 16px;
 }
 .background2{
     height: 141px;
@@ -94,7 +114,8 @@ h6{
     margin-right: 12px;
     display: inline-block;
     font-size: 12.5px;
-    padding-top: 2px;
+    padding: 1px 2px;
+    font-weight: bold;
 }
 .background2 .top-section .star i {
     vertical-align: middle;
@@ -121,18 +142,18 @@ h6{
     margin-right: 4px;
 }
 .card2 .percent{
-    width: 15%;
-    height: 16%;
+    width: 13%;
+    height: 15%;
     border-radius: 50%;
     position: absolute;
     background: #f15252;
     color: #fff;
     left: 15%;
     top: 54%;
-    box-shadow: 0px 0px 5px 7px #fff;
+    box-shadow: 0 0 0 5px #d6fafe;
     text-align: center;
     vertical-align: middle;
-    padding-top: 4%;
+    padding-top: 3%;
     font-size: 14px;
 }
 .card2 .location {
@@ -170,5 +191,47 @@ h6{
 }
 .card2 .price-section .discount .d-arrow {
     font-size: 20px;
+}
+
+/* takhfif vije styles */
+.card2TakhfifVije {
+    height: 221px;
+}
+.card2 .percentTakhfifVije{
+    right: 17%;
+    top: -6%;
+}
+.card2 .title .star{
+    height: 19px;
+    width: 41px;
+    background: #e7e7e7;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 12.5px;
+    padding-top: 1px;
+    padding-right: 1px;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+.card2 .title .star i {
+    vertical-align: middle;
+    color: #ffc107;
+    font-size: 17px;
+}
+.card2 .background2 .location {
+    font-size: 10.5px;
+    margin-top: 10px;
+    margin-right: 3px;
+    background: #fff;
+    width: auto;
+    display: inline-block;
+    position: relative;
+    top: 85px;
+    padding: 1px 2px;
+    border-radius: 12px;
+}
+.card2 .background2 .location i {
+    vertical-align: middle;
+    font-size: 12px;
 }
 </style>

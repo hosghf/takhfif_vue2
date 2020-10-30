@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <h6 class="page-subtitle mr-1"> دسته بندی ها</h6>
+        <div class="page-subtitle mr-1"> دسته بندی ها</div>
           <hooper rtl infinite-scroll :settings="hooperSettings">
             <slide v-for="slide in slides" v-bind:key="slide.id">
               <a href="#">
@@ -17,10 +17,12 @@
 </template>
 
 <style scoped>
+.page-subtitle{
+  margin-top: 4px;
+}
 .container-fluid{
   padding-left: 0;
   margin-bottom: 13px;
-  margin-top:23px;
 }
 .hooper{
   height: 110px;

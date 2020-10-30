@@ -133,10 +133,17 @@ h6{
     color: #fff;
     left: 15%;
     top: 60%;
-    box-shadow: 0px 0px 5px 7px #fff;
+    box-shadow: 0px 0px 0px 5px #d6fafe;
     text-align: center;
     vertical-align: middle;
     padding-top: 4%;
+}
+.percent::after{
+    content: '<div></div>';
+    height: 10px;
+    width: 10px;
+    background: #d6fafe;
+
 }
 .card2 .location {
     font-size: 12.5px;
