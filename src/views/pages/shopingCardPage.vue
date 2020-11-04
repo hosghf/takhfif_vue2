@@ -23,7 +23,7 @@
                 <div class="col-6 py-2">
                     <span>
                         جمع سبد:
-                        <span class="font-weight-bold">30000</span>
+                        <span class="font-weight-bold">3/25/000</span>
                         تومان
                     </span>
                 </div>
@@ -35,15 +35,19 @@
             </div>
         </div>
 
-        <div class="bottom-section"></div>
+        <!-- <div class="bottom-section"></div> -->
+        <Mbottom></Mbottom>
     </div>
 </template>
 
 <script>
 import ShopingItem from "@/components/shopingCardPageComponents/shopingItemComponent"
+import Mbottom from "@/components/marginBottomComponents"
+
 export default {
     components: {
-        ShopingItem
+        ShopingItem,
+        Mbottom
     },
     data() {
         return {
@@ -118,11 +122,16 @@ export default {
 }
 .sum-section div{
    margin-top: 24px;
+   font-size: 13px;
 }
 .sum-section .taeedBtn{
     background: #19c188;
     border: none;
-    width: 90%;
+    width: 97%;
+    height: 33px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: -3px;
 }
 .bottom-section {
     height: 60px;

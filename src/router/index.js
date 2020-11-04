@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 import takhfifPage from "../views/pages/takhfifPage";
 import listCategoryPage from "../views/pages/listCategoryPage"
 import shopingCardPage from "../views/pages/shopingCardPage"
+import signInPage from "../views/pages/signInPage"
+import accountPage from "../views/pages/accountPage"
 
 Vue.use(VueRouter);
 
@@ -27,6 +29,16 @@ const routes = [
     path: "/shopingcard",
     name: "shopingcard",
     component: shopingCardPage
+  },
+  {
+    path: "/signIn",
+    name: "signIn",
+    component: signInPage
+  },
+  {
+    path: "/account",
+    name: "account",
+    component: accountPage
   }
 ];
 

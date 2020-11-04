@@ -7,7 +7,7 @@
                     <h6>
                         خدمات پاکسازی صورت یا کوتاهی مو در آرایشگاه مردانه کاج
                     </h6>
-                    <TakhfifPercent
+                    <TakhfifPercent class="ml-2"
                         percent="71"
                         medium="1"
                         :firstPrice="firstPrice"
@@ -58,7 +58,7 @@ h6{
     height: 123px;
     background: #fff;
     border-radius: 11px;
-    box-shadow: 0px 0px 6px 4px #eee;
+    box-shadow: 0px 0px 4px 1.4px #eee;
     padding: 7px;
 }
 .top-section{
@@ -118,7 +118,7 @@ h6{
     font-weight: bold;
     vertical-align: middle;
     border: 0;
-    box-shadow: 1px 1px 3px 2px #eee;
+    box-shadow: 0px 0px 2px 1px #eee;
 }
 .count .number{
     margin-top: -3px;

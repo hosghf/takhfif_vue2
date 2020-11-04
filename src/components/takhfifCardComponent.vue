@@ -71,7 +71,7 @@ h6{
     background: #fff;
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 1px 3px 7px 4px #bbb;
+    box-shadow: 0px 0px 6px 2px #eee;
     position: relative;
 }
 .background2{
@@ -133,17 +133,10 @@ h6{
     color: #fff;
     left: 15%;
     top: 60%;
-    box-shadow: 0px 0px 0px 5px #d6fafe;
+    box-shadow: 0px 0px 0px 5px #fff;
     text-align: center;
     vertical-align: middle;
     padding-top: 4%;
-}
-.percent::after{
-    content: '<div></div>';
-    height: 10px;
-    width: 10px;
-    background: #d6fafe;
-
 }
 .card2 .location {
     font-size: 12.5px;

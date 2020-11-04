@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid mt-3 py-2 pb-4 bg-white">
-        <h6 class="py-2">انتخاب سایز:</h6>
-        <div class="container row">
+    <div class="container-fluid mt-3 py-1 pb-3 bg-white">
+        <h6 class="py-1">انتخاب سایز:</h6>
+        <div class="row">
             <div class="size mx-3 p-2" @click="selected">
                 S
             </div>
@@ -39,22 +39,25 @@ export default {
 
 <style scoped>
 h6{
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 600;
 }
 .size{
     width: 34px;
     height: 34px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0.5px #eee;
     text-align: center;
     vertical-align: middle;
+    font-weight: 500;
+    font-size: 14px;
 }
-.container{
-    padding-left: 15%;
-    padding-right: 15%;
+.container-fluid .row {
+    margin: 0 auto;
+    width: fit-content;
 }
 .selected{
     border: 1px solid pink;
-    box-shadow: 0 4px 8px 0 #fbc9c9, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0px 5px 2px #f9b8b8;
 }
 </style>

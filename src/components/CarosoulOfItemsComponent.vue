@@ -7,7 +7,7 @@
       <h6>تخفیف های ویژه</h6>
     </div>
 
-    <hooper rtl infinite-scroll :settings="hooperSettings" class="hooper" :class="{hooperTakhfifVije: takhfifVije}">
+    <hooper rtl :settings="hooperSettings" class="hooper" :class="{hooperTakhfifVije: takhfifVije}">
       <slide v-for="slide in slides" v-bind:key="slide.id" class="m-1">
              <TakhfifCard 
                         :title="slide.title"

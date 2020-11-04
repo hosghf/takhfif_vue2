@@ -2,12 +2,10 @@
     <!-- Fixed navbar -->
     <header class="header fixed-top active">
         <nav class="navbar">
-          <div>
-              <button class="menu-btn btn btn-link btn-44">
-                  <span class="icon material-icons" v-on:click="openMenu">
-                    <img src="@/assets/img/menu.png">
-                  </span>
-              </button>
+          <div class="img-menu">
+             <span v-on:click="openMenu">
+                <img src="@/assets/img/menu.png">
+             </span>
           </div>
           <div v-if="curentUrl !== '/'">
               <a class="navbar-brand" href="">
@@ -21,7 +19,11 @@
                   <input class="form-control w-100" type="text" placeholder="Search..." aria-label="Search">
                   <button class="btn btn-link btn-44" type="submit"><span class="icon_search"></span></button>
               </form>
-              <button class="btn btn-link search-btn" type="button"><span class="icon_search"></span></button>
+              <button class="btn btn-link search-btn" type="button">
+                <span>
+                  <svg data-v-fae5bece="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e9e9e9" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"><circle data-v-fae5bece="" cx="11" cy="11" r="8"></circle><line data-v-fae5bece="" x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+              </button>
           </div>
         </nav>
     </header>
@@ -31,9 +33,14 @@
 <style scoped>
 
 .navbar-brand{
-  margin: auto !important;
+  margin: 0 auto !important;
 }
-
+.navbar {
+  padding:10px 9px;
+}
+.img-menu{
+  padding: 7px 7px;
+}
 </style>
 
 <script>

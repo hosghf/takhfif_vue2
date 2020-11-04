@@ -2,51 +2,56 @@
     <div class="mt-5 bg-white">
         <div class="title" @click="toggleTab">
             انتخاب تخفیف برگ
-            <img :class="{rotate: display}" src="@/assets/img/up-chevron.png">
+            <!-- <img :class="{rotate: display}" src="@/assets/img/up-chevron.png"> -->
+            <i v-if="display" class="material-icons arrow">keyboard_arrow_down</i>
+            <i v-if="!display" class="material-icons arrow">keyboard_arrow_up</i>
         </div>
-        <div class="body container" :class="{display: display}">
-            <div class="border-bottom-red mb-2 pb-2">
+        <div class="body container mt-2" :class="{display: display}">
+            <!-- <div class="border-bottom-red mb-2 pb-2"> -->
+            <div class="mb-2">
                 <label class="container-radio">
                     <input type="radio" checked="checked" name="radio">
                     <span class="checkmark"></span>ماساژ شکم
                 </label>
 
-                <div class="container-fluid">
+                <div class="container-fluid font12">
                     <div class="row">
-                        <TakhfifPercent percent="71" medium="1"></TakhfifPercent>
+                        <TakhfifPercent class="m5PxMinu" percent="71" medium="1" firstPrice="200/000" secondPrice="58/000"></TakhfifPercent>
                         <div class="ml-auto mr-auto">
                             <i class="material-icons">shopping_basket</i>
-                            25
+                            <span class="font-weight500"> 25 </span>
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div>
-                            مهلت استفاده
+                        <div class="font-weight500">
+                            مهلت استفاده:
                         </div>
                         <div class="date ml-auto mr-auto">
                             1399/11/21
                         </div>
                     </div>
                 </div>
+                <div class="border-bt-red"></div>
+                <div class="border-bt-gray"></div>
             </div>
 
-            <div class="border-bottom-red my-3 pb-2">
+            <div class="my-3 font12">
                 <label class="container-radio">
-                    <input type="radio" checked="checked" name="radio">
+                    <input type="radio" name="radio">
                     <span class="checkmark"></span>ماساژ شکم
                 </label>
 
                 <div class="container-fluid">
                     <div class="row">
-                        <TakhfifPercent percent="71" medium="1"></TakhfifPercent>
+                        <TakhfifPercent class="m5PxMinu" percent="71" medium="1" firstPrice="200/000" secondPrice="58/000"></TakhfifPercent>
                         <div class="ml-auto mr-auto">
                             <i class="material-icons">shopping_basket</i>
-                            25
+                            <span class="font-weight500"> 25 </span>
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div>
-                            مهلت استفاده
+                        <div class="font-weight500">
+                            مهلت استفاده:
                         </div>
                         <div class="date ml-auto mr-auto">
                             1399/11/21
@@ -55,30 +60,32 @@
                     <div class="row mb-3 mt-4">
                         <div class="count">
                             <button>+</button>
-                            <div class="py-2">2</div>
+                            <div>2</div>
                             <button>-</button>
                         </div>
                     </div>
                 </div>
+                <div class="border-bt-red"></div>
+                <div class="border-bt-gray"></div>
             </div>
 
-            <div class="mb-2 pb-2">
+            <div class="mb-2 pb-2 font12">
                 <label class="container-radio">
-                    <input type="radio" checked="checked" name="radio">
+                    <input type="radio" name="radio">
                     <span class="checkmark"></span>ماساژ شکم
                 </label>
 
                 <div class="container-fluid">
                     <div class="row">
-                        <TakhfifPercent percent="71" medium="1"></TakhfifPercent>
+                        <TakhfifPercent class="m5PxMinu" percent="71" medium="1" firstPrice="200/000" secondPrice="58/000"></TakhfifPercent>
                         <div class="ml-auto mr-auto">
                             <i class="material-icons">shopping_basket</i>
-                            25
+                            <span class="font-weight500"> 25 </span>
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div>
-                            مهلت استفاده
+                        <div class="font-weight500">
+                            مهلت استفاده:
                         </div>
                         <div class="date ml-auto mr-auto">
                             1399/11/21
@@ -86,7 +93,6 @@
                     </div>
                 </div>
             </div>
-
   
         </div>
     </div>
@@ -100,8 +106,14 @@
     height: 40px;
     padding: 10px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
+    box-shadow: 0 1px 1px 1px #eee;
+}
+.title i {
+    font-size: 21px;
+    vertical-align: middle;
+    font-weight: 600;
 }
 i {
     font-size: 14px;
@@ -111,7 +123,6 @@ i {
     display: none;
 }
 
-/* The container */
 .container-radio {
   display: block;
   position: relative;
@@ -138,11 +149,11 @@ i {
   position: absolute;
   top: 0;
   right: 0;
-  height: 15px;
-  width: 15px;
-  background-color: #ccc;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
   border-radius: 50%;
-  border: 1px solid #999;
+  border: 1px solid #e8e8e8;
 }
 
 /* On mouse-over, add a grey background color */
@@ -152,11 +163,32 @@ i {
 
 /* When the radio button is checked, add a blue background */
 .container-radio input:checked ~ .checkmark {
-  background-color: #f15252;
+  background-color: #fff;
 }
-.border-bottom-red{
-    border-bottom: 1px solid #f15252;
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+ 	top: 2px;
+	left: 1.9px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #f15252;
+}
+
+
 .count{
     margin: auto;
     widows: 40%;
@@ -170,6 +202,9 @@ i {
     vertical-align: middle;
     background: #f15252;
     color: white;
+    padding-top: 10px;
+    box-shadow: 0 0 9px 0px #eee;
+    font-weight: 500;
 }
 .count button {
     height: 37px;
@@ -180,7 +215,26 @@ i {
     font-weight: bold;
     vertical-align: middle;
     border: 0;
-    box-shadow: 7px 7px 10px 4px #eee;
+    box-shadow: 0 0 9px 0px #eee;
+}
+.font12 {
+    font-size: 12px;
+}
+.font-weight500{
+    font-weight: 500;
+}
+.border-bt-red {
+    border-bottom: 1px solid #f15656;
+    margin: 0 -15px;
+    margin-top: 10px;
+}
+.border-bt-gray {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0 -15px;
+    /* margin-top: 10px; */
+}
+.m5PxMinu {
+    margin-right: -5px;
 }
 </style>
 
@@ -193,7 +247,7 @@ export default {
     },
       data(){
         return {
-            display: false
+            display: false,
         }
     },
     methods: {

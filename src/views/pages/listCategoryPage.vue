@@ -24,18 +24,21 @@
             </div>
         </div>
 
-        <div class="bottom-space"></div>
+        <!-- <div class="bottom-space"></div> -->
+        <Mbottom></Mbottom>
     </div>
 </template>
 
 <script>
 import CategoryDropdown from "@/components/categoryPagesComponents/dropDownMenu/dropdownCategoryComponent"
 import TakhfifCard from "@/components/takhfifCardComponent"
+import Mbottom from "@/components/marginBottomComponents"
 
 export default {
     components: {
         CategoryDropdown,
-        TakhfifCard
+        TakhfifCard,
+        Mbottom
     },
     data(){
         return {

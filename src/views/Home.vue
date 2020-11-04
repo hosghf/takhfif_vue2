@@ -32,8 +32,9 @@
         
         <CarosoulOfItemsComponent :slides="pezeshkiItem" title="پزشکی و سلامت" backgroundColor='#d5fbfe'></CarosoulOfItemsComponent>
 
-        
-        <div class="bottom-space"></div>
+        <!-- <div class="bottom-space"></div> -->
+        <Mbottom></Mbottom>
+
     </div>
 </template>
 
@@ -43,6 +44,7 @@ import 'hooper/dist/hooper.css';
 
 import CarosoulOfItemsComponent from '@/components/CarosoulOfItemsComponent';
 import MainPageCategory from '@/components/MainPageCategory';
+import Mbottom from "@/components/marginBottomComponents"
 
 export default {
   name: 'App',
@@ -51,7 +53,8 @@ export default {
     Slide,
     HooperPagination,
     CarosoulOfItemsComponent,
-    MainPageCategory
+    MainPageCategory,
+    Mbottom
   },
 
   data() {
@@ -77,6 +80,17 @@ export default {
               oldprice: "58000",
               newprice: "28000",
               percent: "71"
+          },
+        {
+              id:1,
+              location: "شهیدان مشرف",
+              title: "میکرودرم آبریژن در مطب خانم دکتر  (...",
+              backgroundImg: require('@/assets/img/tt2.png'),
+              star:"4.2",
+              refund: "4000",
+              oldprice: "58000",
+              newprice: "28000",
+              percent: "71"
           }
       ],
       pezeshkiItem:[
@@ -90,10 +104,32 @@ export default {
               oldprice: "58000",
               newprice: "28000",
               percent: "71"
+          },
+          {
+              id:1,
+              location: "شهیدان مشرف",
+              title: "میکرودرم آبریژن در مطب خانم دکتر نرگس قانعی(متخصص...",
+              backgroundImg: require('@/assets/img/tt2.png'),
+              star:"4.2",
+              refund: "4000",
+              oldprice: "58000",
+              newprice: "28000",
+              percent: "71"
           }
       ],
       takhfifVijeSlide:[
         {
+              id:1,
+              location: "شهیدان مشرف",
+              title: "میکرودرم آبریژن در مطب آقای دکتر...",
+              backgroundImg: require('@/assets/img/tt2.png'),
+              star:"4.2",
+              refund: "4000",
+              oldprice: "58000",
+              newprice: "28000",
+              percent: "71"
+          },
+          {
               id:1,
               location: "شهیدان مشرف",
               title: "میکرودرم آبریژن در مطب آقای دکتر...",

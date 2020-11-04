@@ -20,8 +20,8 @@
       <router-link to="/takhfifPage" class="list-group-item list-group-item-action"><i class="material-icons">view_day</i>تخفیف </router-link>
       <router-link to="/listCategoryPage" class="list-group-item list-group-item-action"><i class="material-icons">insert_emoticon</i>لیست کتگوری</router-link>
       <router-link to="shopingcard" class="list-group-item list-group-item-action"><i class="material-icons">notifications</i>سبد خرید</router-link>
-      <a href="setting.html" class="list-group-item list-group-item-action"><i class="material-icons">account_circle</i>Setting</a>
-      <a href="aboutus.html" class="list-group-item list-group-item-action"><i class="material-icons">business</i>About</a>
+      <router-link to="/signIn" class="list-group-item list-group-item-action"><i class="material-icons">account_circle</i>ورود</router-link>
+      <router-link to="/account" class="list-group-item list-group-item-action"><i class="material-icons">business</i>حساب کاربری</router-link>
     </div>
   </div>
   <!-- sidebar ends -->
