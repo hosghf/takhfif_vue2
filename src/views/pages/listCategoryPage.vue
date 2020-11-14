@@ -7,21 +7,23 @@
             </div>
         </div>
         <div class="container mt-3 mb-4" v-for="takhfif in takhfifha" :key="takhfif.id">
-            <div class="container mb-4">
-                <div class="row">
-                    <TakhfifCard 
-                                :title="takhfif.title"
-                                :location="takhfif.location"
-                                :background="takhfif.background"
-                                :star="takhfif.star"
-                                :refund="takhfif.refund"
-                                :oldprice="takhfif.oldprice"
-                                :newprice="takhfif.newprice"
-                                :percent="takhfif.percent"
-                                >
-                    </TakhfifCard>
+            <router-link :to="'/takhfifPage/' + takhfif.id">
+                <div class="container mb-4">
+                    <div class="row">
+                        <TakhfifCard 
+                                    :title="takhfif.title"
+                                    :location="takhfif.location"
+                                    :background="takhfif.background"
+                                    :star="takhfif.star"
+                                    :refund="takhfif.refund"
+                                    :oldprice="takhfif.oldprice"
+                                    :newprice="takhfif.newprice"
+                                    :percent="takhfif.percent"
+                                    >
+                        </TakhfifCard>
+                    </div>
                 </div>
-            </div>
+            </router-link>
         </div>
 
         <!-- <div class="bottom-space"></div> -->

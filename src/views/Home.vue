@@ -82,7 +82,7 @@ export default {
               percent: "71"
           },
         {
-              id:1,
+              id:2,
               location: "شهیدان مشرف",
               title: "میکرودرم آبریژن در مطب خانم دکتر  (...",
               backgroundImg: require('@/assets/img/tt2.png'),
@@ -95,7 +95,7 @@ export default {
       ],
       pezeshkiItem:[
         {
-              id:1,
+              id:2,
               location: "شهیدان مشرف",
               title: "میکرودرم آبریژن در مطب خانم دکتر نرگس قانعی(متخصص...",
               backgroundImg: require('@/assets/img/tt2.png'),
@@ -106,7 +106,7 @@ export default {
               percent: "71"
           },
           {
-              id:1,
+              id:2,
               location: "شهیدان مشرف",
               title: "میکرودرم آبریژن در مطب خانم دکتر نرگس قانعی(متخصص...",
               backgroundImg: require('@/assets/img/tt2.png'),
@@ -130,7 +130,7 @@ export default {
               percent: "71"
           },
           {
-              id:1,
+              id:3,
               location: "شهیدان مشرف",
               title: "میکرودرم آبریژن در مطب آقای دکتر...",
               backgroundImg: require('@/assets/img/tt2.png'),

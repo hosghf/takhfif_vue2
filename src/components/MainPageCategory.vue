@@ -3,58 +3,18 @@
         <div class="page-subtitle mr-1"> دسته بندی ها</div>
           <hooper rtl infinite-scroll :settings="hooperSettings">
             <slide v-for="slide in slides" v-bind:key="slide.id">
-              <a href="#">
+              <router-link :to="'/listCategoryPage/' + slide.id">
                 <div class='square-box p-3' :style="'background:' + slide.background">
                     <div class='square-content'>
                       <img :src="slide.icon">
                       <p class="cat-text">{{slide.title}}</p>
                     </div>
                 </div>
-              </a>
+              </router-link>
             </slide>
           </hooper>
     </div>
 </template>
-
-<style scoped>
-.page-subtitle{
-  margin-top: 4px;
-}
-.container-fluid{
-  padding-left: 0;
-  margin-bottom: 13px;
-}
-.hooper{
-  height: 110px;
-}
-.square-box{
-    position: relative;
-    width: 110px;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 110px;
-}
-.square-box:before{
-    content: "";
-    display: block;
-    padding-top: 100%;
-
-}
-.square-content{
-    position:  absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    color: white;
-    text-align: center;
-    padding-top: 20px;
-}
-.cat-text{
-  font-size: 13px;
-  margin-top: 3px;
-}
-</style>
 
 <script>
 import { Hooper, Slide } from 'hooper';
@@ -107,3 +67,43 @@ export default {
   }
 }
 </script>
+
+
+<style scoped>
+.page-subtitle{
+  margin-top: 4px;
+}
+.container-fluid{
+  padding-left: 0;
+  margin-bottom: 13px;
+}
+.hooper{
+  height: 110px;
+}
+.square-box{
+    position: relative;
+    width: 110px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 110px;
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+.cat-text{
+  font-size: 13px;
+  margin-top: 3px;
+}
+</style>

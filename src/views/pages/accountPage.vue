@@ -37,7 +37,7 @@
             <div class="carousel-container">
                 <hooper rtl :settings="hooperSettings">
                     <slide v-for="bone in bones" :key="bone.id" >
-                         <BonCard :title="bone.title" :bone="bone.numerOfBon"></BonCard>
+                        <BonCard :title="bone.title" :bone="bone.numerOfBon"></BonCard>
                     </slide>
                 </hooper>
             </div>
@@ -81,8 +81,12 @@ export default {
   },
  data () {
      return {
+         baseW: 360,
+         baseItem: 1.04,
+         newWidth: window.innerWidth,
          hooperSettings: {
-            itemsToShow: 1.03
+            itemsToShow: 1.3,
+            centerMode: false
          },
          bones: [
             {
@@ -97,7 +101,15 @@ export default {
             }
          ]
      }
- }
+  },
+  methods:{
+    myinit(){
+      this.$set(this.hooperSettings, 'itemsToShow', (this.newWidth * this.baseItem) / this.baseW );
+    }
+  },
+  created(){
+    this.myinit()
+  }
 }
 </script>
 

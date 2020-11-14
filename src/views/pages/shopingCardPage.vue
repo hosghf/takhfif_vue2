@@ -11,7 +11,7 @@
                     <ShopingItem :firstPrice="num.firstPrice" secondPrice="110/000"></ShopingItem>
                 </div>
                 <div class="delete">
-                    <div class="del-oval" @click="deleteItem">
+                    <div class="del-oval" @click="deleteItem(num.id)">
                         <img src="../../assets/img/deleteico.png">
                     </div>
                 </div>
@@ -23,7 +23,8 @@
                 <div class="col-6 py-2">
                     <span>
                         جمع سبد:
-                        <span class="font-weight-bold">3/25/000</span>
+                        <!-- <span class="font-weight-bold">3/25/000</span> -->
+                        <span class="font-weight-bold">{{totalPrice}}</span>
                         تومان
                     </span>
                 </div>
@@ -54,18 +55,33 @@ export default {
             TestNumbers: [
                 {
                     id: 1,
-                    firstPrice: "12000"
+                    firstPrice: 12000
                 },
                 {
-                    id: 2,
-                    firstPrice: "200000"
+                    id: 3,
+                    firstPrice: 200000
                 }
             ],
         }
     },
+    computed: {
+        totalPrice: function() {
+            var x = 0;
+            for(var i = 0; i < this.TestNumbers.length; i++) {
+                x = x + this.TestNumbers[i].firstPrice;
+            }
+            return x;
+        }
+    },
     methods: {
-        deleteItem: function(){
-            alert('hello')
+        deleteItem: function(e){
+            alert(e)
+            for(var i = 0; i < this.TestNumbers.length ; i++) {
+                if(e === this.TestNumbers[i].id){
+                    // this.TestNumbers.splice(e, 1);
+                    this.TestNumbers = this.TestNumbers.filter(function(value){ return value.id != e;});
+                }
+            }
         }
     }
 }

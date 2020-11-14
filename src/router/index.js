@@ -21,7 +21,17 @@ const routes = [
     component: takhfifPage
   },
   {
+    path: "/takhfifPage/:id",
+    name: "takhfifPage",
+    component: takhfifPage
+  },
+  {
     path: "/listCategoryPage",
+    name: "listCategoryPage",
+    component: listCategoryPage
+  },
+  {
+    path: "/listCategoryPage/:id",
     name: "listCategoryPage",
     component: listCategoryPage
   },

@@ -9,6 +9,7 @@
 
     <hooper rtl :settings="hooperSettings" class="hooper" :class="{hooperTakhfifVije: takhfifVije}">
       <slide v-for="slide in slides" v-bind:key="slide.id" class="m-1">
+          <router-link :to="'/takhfifPage/' + slide.id">
              <TakhfifCard 
                         :title="slide.title"
                         :location="slide.location"
@@ -22,6 +23,7 @@
                         :takhfifVije="takhfifVije"
                         >
             </TakhfifCard>
+          </router-link>
       </slide>
     </hooper>
 
