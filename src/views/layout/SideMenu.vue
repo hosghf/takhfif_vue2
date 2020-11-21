@@ -1,6 +1,16 @@
 <template>
   <!-- sidebar -->
   <div class="sidebar">
+    <div class="red-background">
+       <div class="img-white-cont">
+          <svg class="right-svg" width="83.523" height="36.781" viewBox="0 0 83.523 36.781">
+            <path id="Union_1" data-name="Union 1" d="M0,36.781v-18H23.788c-.181-11.672.2-23.6,2.906-16.8C35.63,24.428,72.03,34.919,72.03,34.919l11.493,1.708L30,36.635v.147Z" transform="translate(0 0)" fill="#fff"/>
+          </svg>
+          <svg class="left-svg" width="79" height="36.75" viewBox="0 0 79 36.75">
+            <path id="Union_1" data-name="Union 1" d="M54,36.75v-.1L0,36.645l11.5-1.709s36.4-10.5,45.328-32.95c3.015-7.58,3.145,8.092,2.826,20.764H79v14Z" fill="#fff"/>
+          </svg>
+       </div>
+    </div>
     <div class="row no-gutters">
       <div class="col-auto align-self-center top-img mt-1">
         <router-link to="/account">
@@ -45,12 +55,10 @@
       </div> -->
     </div>
     <div class="list-group main-menu my-4">
-      <router-link to="/" class="list-group-item list-group-item-action active"><i class="material-icons">home</i>خانه</router-link>
-      <router-link to="/takhfifPage" class="list-group-item list-group-item-action"><i class="material-icons">view_day</i>تخفیف </router-link>
-      <router-link to="/listCategoryPage" class="list-group-item list-group-item-action"><i class="material-icons">insert_emoticon</i>لیست کتگوری</router-link>
-      <router-link to="shopingcard" class="list-group-item list-group-item-action"><i class="material-icons">notifications</i>سبد خرید</router-link>
-      <router-link to="/signIn" class="list-group-item list-group-item-action"><i class="material-icons">account_circle</i>ورود</router-link>
-      <router-link to="/account" class="list-group-item list-group-item-action"><i class="material-icons">business</i>حساب کاربری</router-link>
+      <router-link to="/account" class="list-group-item list-group-item-action active"><i class="material-icons">shopping_cart</i>تخفیف های من</router-link>
+      <router-link to="/takhfifPage" class="list-group-item list-group-item-action"><i class="material-icons">support</i>پشتیبانی</router-link>
+      <router-link to="/listCategoryPage" class="list-group-item list-group-item-action"><i class="material-icons">insert_emoticon</i>درخواست همکاری</router-link>
+      <router-link to="/signIn" class="list-group-item list-group-item-action"><i class="material-icons">info</i>درباره ما</router-link>
     </div>
   </div>
   <!-- sidebar ends -->
@@ -63,6 +71,32 @@ export default {
 </script>
 
 <style scoped>
+  .red-background {
+    position: absolute;
+    background: #ed4c4c;
+    height: 87.87px;
+    width: 100%;
+    margin: -20px;
+  }
+  .img-white-cont {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: #fff;
+    right: 89.5px;
+    bottom: -17px;
+    position: relative;
+  }
+  .right-svg {
+    position: relative;
+    left: 57px;
+    bottom: -36px;
+  }
+  .left-svg {
+    position: relative;
+    left: -72px;
+    bottom: 2px;
+  }
  .sidebar {
    background: #fff;
    color: #000;
@@ -99,7 +133,7 @@ export default {
   margin-bottom: 30px;
 }
 .sidebar .main-menu .list-group-item i{
-  margin-right: 0;
+  margin-right: -8px;
   margin-left: 13px;
 }
 .sidebar .main-menu .list-group-item {

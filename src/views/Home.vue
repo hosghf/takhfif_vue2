@@ -10,17 +10,17 @@
         <div class="mb-4 px-1 search-box1">
             <input type="text" class="form-control border-0 search" placeholder="جستجو برای تخفیف مورد نظر">
             <button>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e9e9e9" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e9e9e9" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </button>
         </div>
 
         <!--  main slider  -->
-        <div class="slideshow-container container" >
-          <hooper rtl infinite-scroll :playSpeed="3500" v-bind:style="{ height: hooperHeight + 'px' }">
+        <div class="container">
+          <hooper class="main-slide" rtl infinite-scroll :playSpeed="3500"  v-bind:style="{ height: hooperHeight + 'px' }">
             <slide v-for="slide in slides" v-bind:key="slide.id">
-                <img :src="slide.img" :key="slide.id" style="width:100%" class="img_slider">
+                <img :src="slide.img" :key="slide.id" style="width:100%; height: 80%" class="img_slider">
             </slide>
-          <hooper-pagination slot="hooper-addons"></hooper-pagination>
+            <hooper-pagination slot="hooper-addons"></hooper-pagination>
           </hooper>
         </div>
 
@@ -142,12 +142,15 @@ export default {
           }
       ],
       baseW: 360,
-      baseH: 160,
+      baseH: 155,
       newWidth: window.innerWidth
     }
   },
   computed: {
     hooperHeight: function(){
+      if(this.newWidth > 550){
+        return 200;
+      }
       return (this.newWidth * this.baseH) / this.baseW
     }
   }
@@ -205,5 +208,15 @@ export default {
   .bottom-space{
     margin-bottom: 10px;
     height: 30px;
+  }
+</style>
+<style>
+  .hooper-indicator.is-active {
+    background: #cf0400 !important;
+    border-radius: 0;
+  }
+  .hooper-indicator {
+    background: #e7e7e7 !important;
+    border-radius: 0;
   }
 </style>

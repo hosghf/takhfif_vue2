@@ -1,7 +1,13 @@
 <template>
-    <div class="card2 ml-4" v-bind:style="{ background: backgroundColor }" :class="{card2TakhfifVije: takhfifVije}">
-            
+    <div class="card2 ml-4" v-bind:style="{ background: backgroundColor }" :class="{card2TakhfifVije: takhfifVije}">  
         <div class="background2" :style="'background: url( '+ backgroundImg + ');   background-size: cover;'">
+            <svg class="svg-percent" :class="{'svg-percent-vije': takhfifVije}"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="82px" height="42px">
+                <path fill-rule="evenodd"  :fill="backgroundColor"
+                d="M81.575,15.817 C81.489,16.832 76.078,15.817 76.078,15.817 L60.471,15.817 C60.945,17.540 61.219,19.345 61.219,21.219 C61.219,32.454 52.111,41.562 40.875,41.562 C29.639,41.562 20.531,32.454 20.531,21.219 C20.531,19.312 20.813,17.475 21.303,15.725 L6.225,15.725 C6.225,15.725 0.811,16.754 0.725,15.725 C10.756,13.686 18.723,12.881 25.037,8.465 C26.319,6.875 27.828,5.477 29.526,4.334 C29.600,4.245 29.678,4.169 29.752,4.078 C29.904,3.989 30.054,3.945 30.203,3.923 C33.308,2.002 36.956,0.875 40.875,0.875 C44.965,0.875 48.765,2.093 51.955,4.170 C52.155,4.172 52.357,4.214 52.563,4.334 C52.783,4.601 53.014,4.838 53.239,5.089 C54.319,5.919 55.313,6.849 56.207,7.875 C62.680,12.930 70.975,13.690 81.575,15.817 Z"/>
+            </svg>
             <div class="row top-section">
                 <div class="star" v-if="!takhfifVije">
                     <i class="material-icons">star</i>
@@ -22,9 +28,10 @@
             </div>
 
         </div>
-        <div class="percent" :class="{percentTakhfifVije : takhfifVije}" :style="percentShadow">
+        <div class="percent" :class="{percentTakhfifVije : takhfifVije}" >
             %{{percent}}
         </div>
+
         <div class="location" v-if="!takhfifVije">
             <i class="material-icons">room</i>
             <span>
@@ -75,6 +82,16 @@ export default {
 </script>
 
 <style scoped>
+.svg-percent-vije {
+    position: absolute;
+    top: -23.2px;
+    right: 13px;
+}
+.svg-percent {
+    position: absolute;
+    bottom: -26.8px;
+    left: 25px;
+}
 h6{
     font-size: 12px;
     font-weight: bold;
@@ -96,6 +113,7 @@ h6{
     background: blue;
     border-radius: 15px;
     background-size: cover;
+    position: relative;
 }
 .background2 .top-section{
     height: 21px;
@@ -142,18 +160,18 @@ h6{
     margin-right: 4px;
 }
 .card2 .percent{
-    width: 13%;
-    height: 15%;
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
     position: absolute;
     background: #f15252;
     color: #fff;
-    left: 15%;
-    top: 54%;
-    box-shadow: 0 0 0 5px #d6fafe;
+    left: 57px;
+    top: 140px;
+    /* box-shadow: 0 0 0 5px #d6fafe; */
     text-align: center;
     vertical-align: middle;
-    padding-top: 3%;
+    padding-top: 6.5px;
     font-size: 14px;
 }
 .card2 .location {
@@ -198,8 +216,8 @@ h6{
     height: 221px;
 }
 .card2 .percentTakhfifVije{
-    right: 17%;
-    top: -6%;
+    right: 46px;
+    top: -10px;
 }
 .card2 .title .star{
     height: 19px;

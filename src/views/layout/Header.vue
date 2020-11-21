@@ -4,7 +4,7 @@
         <nav class="navbar">
           <div class="img-menu">
              <span v-on:click="openMenu">
-                <img src="@/assets/img/menu.png">
+                <img src="@/assets/img/menu.png" class="menu-brg">
              </span>
           </div>
           <div v-if="curentUrl !== '/'">

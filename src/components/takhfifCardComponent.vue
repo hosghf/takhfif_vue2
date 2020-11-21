@@ -15,8 +15,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="percent">
+                <!-- <div class="percent">
                     %{{percent}}
+                </div> -->
+                <div class="p-c">
+                    <div class="percent">
+                        %{{percent}}
+                    </div>
                 </div>
                 <div class="location">
                     <i class="material-icons">room</i>
@@ -125,18 +130,25 @@ h6{
     margin-right: 4px;
 }
 .card2 .percent{
-    width: 15%;
-    height: 16%;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     background: #f15252;
     color: #fff;
-    left: 15%;
-    top: 60%;
-    box-shadow: 0px 0px 0px 5px #fff;
+    /* left: 15%;
+    top: 63%; */
+    left: -52px;
+    top: 24px;
+    box-shadow: 0px 0px 0px 4px #fff;
     text-align: center;
     vertical-align: middle;
-    padding-top: 4%;
+    padding-top: 9px;
+}
+.svg-percent {
+    position: relative;
+    bottom: -80%;
+    left: -68.5%;
 }
 .card2 .location {
     font-size: 12.5px;
@@ -173,5 +185,13 @@ h6{
 }
 .card2 .price-section .discount .d-arrow {
     font-size: 20px;
+}
+.p-c {
+    background-image: url('../assets/img/hellaal.png');
+    height: 99px;
+    width: 134px;
+    position: absolute;
+    top: 166px;
+    left: 10%;
 }
 </style>

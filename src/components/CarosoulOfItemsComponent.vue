@@ -1,5 +1,5 @@
 <template>
- <div class="mb-3 container-fluid">
+ <div class="mb-3 container-fluid" :class="{'vije-background': takhfifVije}">
     <h6 class="page-subtitle mr-1"> {{title}} </h6>
 
     <div class="TitletakhfifVije" v-if="takhfifVije">
@@ -53,14 +53,14 @@ export default {
       }
     }
   },
-      methods:{
-        myinit(){
-          this.$set(this.hooperSettings, 'itemsToShow', (this.newWidth * this.baseItem) / this.baseW );
-        }
-     },
-     created(){
-       this.myinit()
-     },
+  methods:{
+    myinit(){
+      this.$set(this.hooperSettings, 'itemsToShow', (this.newWidth * this.baseItem) / this.baseW );
+    }
+  },
+  created(){
+    this.myinit()
+  },
   props: ['backgroundColor', 'title', 'slides', 'takhfifVije'],
 }
 </script>
@@ -76,6 +76,8 @@ export default {
 }
 .hooperTakhfifVije {
   height: 250px;
+  background: rgb(242,242,242);
+  background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(254,254,254,1) 100%);
 }
 .TitletakhfifVije{
   display: flex;
@@ -94,5 +96,9 @@ export default {
   margin-top: 7px;
   margin-right: 8px;
   margin-bottom: 0;
+}
+.vije-background {
+  background: rgb(242,242,242);
+  background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(254,254,254,1) 100%);
 }
 </style>

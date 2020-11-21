@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div v-on:click="closeMenu">
     <Header></Header>
     <div class="row mt-4"></div>
-    <div class="" v-on:click="closeMenu">
+    <div>
       <router-view />
       <SideMenu></SideMenu>
     </div>
-    <div v-on:click="closeMenu">
+    <div>
       <Footer></Footer>
     </div>
   </div>
@@ -38,9 +38,11 @@ export default {
     }
   },
   methods: {
-    closeMenu: function (){
-      if(this.body.classList.contains('sidemenu-open') ){
-        this.body.classList.remove('sidemenu-open')
+    closeMenu: function (event){
+      if(!event.target.classList.contains('menu-brg')){
+        if(this.body.classList.contains('sidemenu-open') ){
+          this.body.classList.remove('sidemenu-open')
+        }
       }
     }
   }

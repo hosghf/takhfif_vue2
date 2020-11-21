@@ -1,0 +1,20 @@
+ <svg class="svg-percent"
+                        width="140px" height="92px">
+                        <defs>
+                        <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="140px" height="92px"  >
+                            <feOffset in="SourceAlpha" dx="0" dy="0" />
+                            <feGaussianBlur result="blurOut" stdDeviation="4.583" />
+                            <feFlood flood-color="rgb(242, 242, 242)" result="floodOut" />
+                            <feComposite operator="atop" in="floodOut" in2="blurOut" />
+                            <feComponentTransfer><feFuncA type="linear" slope="1"/></feComponentTransfer>
+                            <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                        </filter>
+                        </defs>
+                        <g filter="url(#Filter_0)">
+                        <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                        d="M118.906,39.095 C118.802,40.328 112.245,39.095 112.245,39.095 L93.363,39.095 C93.937,41.185 94.250,43.384 94.250,45.656 C94.250,59.291 83.211,70.344 69.594,70.344 C55.976,70.344 44.937,59.291 44.937,45.656 C44.937,43.343 45.262,41.107 45.856,38.984 L27.596,38.984 C27.596,38.984 21.035,40.233 20.931,38.984 C33.068,36.513 42.719,35.550 50.365,30.211 C51.923,28.269 53.765,26.564 55.833,25.169 C55.924,25.060 56.016,24.957 56.106,24.846 C56.282,24.743 56.455,24.689 56.628,24.659 C60.395,22.322 64.836,20.969 69.594,20.969 C74.550,20.969 79.162,22.439 83.027,24.959 C83.265,24.963 83.505,25.014 83.749,25.157 C83.964,25.418 84.183,25.668 84.402,25.917 C85.828,26.991 87.129,28.220 88.291,29.573 C96.116,35.616 106.133,36.529 118.906,39.095 Z"/>
+                        </g>
+                    </svg>

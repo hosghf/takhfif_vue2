@@ -147,10 +147,9 @@
                 <div class="col-6">روزهای سرویس دهی</div>
                 <div class="col-6 text-right">شبنه تا پنچشنبه</div>
             </div>
-            <div class="row bg-white py-2 mt-3">
-                <div class="py-2">آدرس مجموعه:</div>
-                <p> بعد از دروازه قرآن روبروی کاشی مسعود میدان میوه و تره بار شاهدیه</p>
-            </div>
+            
+            <div class="py-2"> آدرس مجموعه: </div>
+            <p class=""> بعد از دروازه قرآن روبروی کاشی مسعود میدان میوه و تره بار شاهدیه</p>
             
             <div class="map row">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6934.974730860709!2d52.48416351874294!3d29.647628834825653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1602015413381!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

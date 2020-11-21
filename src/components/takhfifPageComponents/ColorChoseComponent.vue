@@ -3,9 +3,10 @@
             <h6 class="py-1">انتخاب رنگ:</h6>
             <div class="row">
                 <div class="mr-2 outerOval p-2 mx-1" v-on:click="selected" v-for="color in colors" :key="color.title">                    
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="10" viewBox="0 0 40 10">
+                    <svg width="40" height="10" viewBox="0 0 40 10" :class="{'white-shadow': color.color == 'white' ? true : false}">
                         <rect id="Rectangle_1" :style="'fill: ' + color.color" data-name="Rectangle 1" class="cls-1" width="40" height="10" rx="5"/>
                     </svg>
+                    <br>
                     {{color.title}}
                 </div>  
             </div>
@@ -50,7 +51,7 @@ export default {
                     color: 'pink'
                 }
             ],
-            children: ''
+            children: '',
         }
     }
 }
@@ -87,5 +88,9 @@ h6{
 .container-fluid .row {
     width: fit-content;
     margin: 0 auto;
+}
+.white-shadow {
+    box-shadow: 0 0 1px 3px #f4f4f4;
+    border-radius: 5px;
 }
 </style>

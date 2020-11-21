@@ -7,7 +7,6 @@
             <input class="password form-control" type="password" placeholder="کلمه عبور">
             <button class="btn">ثبت نام</button>
         </form>
-        <!-- <div class="bottom-section"></div> -->
         <Mbottom></Mbottom>
     </div>
 </template>
@@ -38,7 +37,7 @@ h5 {
     background: #f15252;
     color: #fff;
     position: relative;
-    top: 200px;
+    top: 150px;
     width: 70%;
     margin: 0 auto;
     display: block;
@@ -49,10 +48,5 @@ h5 {
 }
 .password {
     margin-top: 15px;
-}
-.bottom-section {
-    height: 50px;
-    width: 2px;
-    margin-bottom: 40px;
 }
 </style>
