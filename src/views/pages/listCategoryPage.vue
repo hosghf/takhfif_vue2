@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row top-cat">
                 <CategoryDropdown title="دسته بندی"></CategoryDropdown>
-                <CategoryDropdown title="جدیدترین"></CategoryDropdown>
+                <CategoryDropdown title="جدیدترین" catsvg=true></CategoryDropdown>
             </div>
         </div>
         <div class="container mt-3 mb-4" v-for="takhfif in takhfifha" :key="takhfif.id">

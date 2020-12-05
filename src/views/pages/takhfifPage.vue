@@ -54,7 +54,13 @@
                         روز
                     </span>
                 </div>
+                <svg class="mohlat-svg"
+                    width="110px" height="44px">
+                    <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+                    d="M108.327,11.105 C108.327,11.105 75.075,-14.002 56.449,13.724 C37.824,36.686 0.780,38.373 0.780,38.373 L109.637,43.612 L108.327,11.105 Z"/>
+                </svg>
             </div>
+                
         </div>
         
         <div style="background: #fff">
@@ -136,19 +142,19 @@
                 <div class="col-6 text-right">3 روز</div>
             </div>
             <div class="info-row bg-gray py-2">
-                <div class="col-6"> ساعات پاسخگویی</div>
-                <div class="col-6 text-right">8 صبح تا یک بامداد </div>
+                <div class="col-6">روزهای سرویس دهی</div>
+                <div class="col-6 text-right">شنبه تا پنجشنبه</div>
             </div>
-            <div class="info-row bg-white py-2">
+            <div class="info-row py-2">
+                <div class="col-6">ساعات پاسخگویی</div>
+                <div class="col-6 text-right">8 صبح تا یک بامداد</div>
+            </div>
+            <div class="info-row bg-gray py-2">
                 <div class="col-6">  شماره تلفن مجموعه</div>
                 <div class="col-6 text-right">035676535</div>
             </div>
-            <div class="info-row bg-gray py-2">
-                <div class="col-6">روزهای سرویس دهی</div>
-                <div class="col-6 text-right">شبنه تا پنچشنبه</div>
-            </div>
             
-            <div class="py-2"> آدرس مجموعه: </div>
+            <div class="py-2 pt-4"> آدرس مجموعه: </div>
             <p class=""> بعد از دروازه قرآن روبروی کاشی مسعود میدان میوه و تره بار شاهدیه</p>
             
             <div class="map row">
@@ -165,7 +171,7 @@
       
       <ChoseTakhfifBarg></ChoseTakhfifBarg>
 
-      <div class="container container-buy-button py-4">
+      <div class="container container-buy-button py-4 pb-5">
           <div class="row">
               <div class="buyButtonSection">
                 <button class="buy ml-1">خرید سریع</button>
@@ -205,6 +211,11 @@ export default {
 </script>
 
 <style scoped>
+.mohlat-svg {
+    position: absolute;
+    top: 0;
+    left: -52px;
+}
 h6{
     font-size: 14px;
 }
@@ -295,6 +306,7 @@ i{
 .timer-container{
     width: 13%;
     font-size: 10px;
+    z-index: 1;
     /* text-align: center; */
 }
 .timer{

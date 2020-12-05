@@ -2,7 +2,6 @@
     <div class="mt-5 bg-white">
         <div class="title" @click="toggleTab">
             انتخاب تخفیف برگ
-            <!-- <img :class="{rotate: display}" src="@/assets/img/up-chevron.png"> -->
             <i v-if="display" class="material-icons arrow">keyboard_arrow_down</i>
             <i v-if="!display" class="material-icons arrow">keyboard_arrow_up</i>
         </div>

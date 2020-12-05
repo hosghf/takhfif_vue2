@@ -27,6 +27,23 @@
         </router-link>
       </div>
     </div>
+    <div class="row no-gutters top-name" @click="exit">
+      <div class="col align-self-center">
+        <router-link to="/account" class="account-link">
+          <svg width="24.064" height="24.765" viewBox="0 0 24.064 24.765">
+            <g id="exit" transform="translate(-17.232 -6)">
+              <g id="Group_2" data-name="Group 2" transform="translate(15)">
+                <g id="Group_1" data-name="Group 1">
+                  <path id="Path_1" data-name="Path 1" d="M31.75,19.155a.968.968,0,0,0-.968.967v2.709H16.936V1.935H30.781V4.644a.968.968,0,0,0,1.936,0V.967A.968.968,0,0,0,31.75,0H15.968A.968.968,0,0,0,15,.967V23.8a.968.968,0,0,0,.968.967H31.75a.968.968,0,0,0,.968-.967V20.122A.968.968,0,0,0,31.75,19.155Z" transform="translate(-12.768 6)"/>
+                  <path id="Path_2" data-name="Path 2" d="M259.9,186.514l-3.652-3.836a1.314,1.314,0,0,0-1.922,0,1.479,1.479,0,0,0,0,2.019l1.332,1.4H244.4a1.429,1.429,0,0,0,0,2.855h11.259l-1.332,1.4a1.479,1.479,0,0,0,0,2.019,1.314,1.314,0,0,0,1.922,0l3.652-3.836h0a1.441,1.441,0,0,0,.4-1.009A1.486,1.486,0,0,0,259.9,186.514Z" transform="translate(-234 -169.352)"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+          خروج
+        </router-link>
+      </div>
+    </div>
     <div class="row social-icons-section">
       <!-- <div class="col-12"> -->
          <div class="icon-cont insta">
@@ -55,10 +72,21 @@
       </div> -->
     </div>
     <div class="list-group main-menu my-4">
-      <router-link to="/account" class="list-group-item list-group-item-action active"><i class="material-icons">shopping_cart</i>تخفیف های من</router-link>
-      <router-link to="/takhfifPage" class="list-group-item list-group-item-action"><i class="material-icons">support</i>پشتیبانی</router-link>
-      <router-link to="/listCategoryPage" class="list-group-item list-group-item-action"><i class="material-icons">insert_emoticon</i>درخواست همکاری</router-link>
-      <router-link to="/signIn" class="list-group-item list-group-item-action"><i class="material-icons">info</i>درباره ما</router-link>
+      <router-link to="/account" class="list-group-item list-group-item-action" :class="{active: $route.path == '/account' ? true : false}"><i class="material-icons">shopping_cart</i>تخفیف های من</router-link>
+      <router-link to="/takhfifPage" class="list-group-item list-group-item-action" :class="{active: $route.path == '/takhfifPage' ? true : false}">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+          <image id="support" width="19" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXUlEQVQ4jY3SMUvWURTH8Y8mIdESQYtLEohIpPUUlEKo0BakVIovQCEaaqjRF9Ei7Qo5OKibiyiZiw0NQiH4BhRxcTFT48Dx4fbn8aEDl3v//3N+33PuObelVqup2A28wyt0pWsHC/iEwzK8tSLuxzZuYxLXc03mv/ANlIK24tyNJUxhJfePaME63uIZFvEUP0NUXmEVy/iCtQSW9gtDGMMIhssr3EvnJmYaiC8qnMmYodTUAT257yf9MnuBgyJpHRCic1xp0Nhq06/iFI9LwOds1hl+NwH8wUkmWigB33Efe5htApjDcwympg44wo/c3+fYwibQmesaPqA9/RH7zzuIKzxBH8bzHJkeZue/4SU2Mva8BNzJ+T/K7zc555sZ+DXfyd30b2V1uwG4lSV1FNVEYAheJ6AUh0Wi0DwIwHRFXELmcVwRX1hopgMw2qTrvU18YaMxhUbZ/8/o+Au+DEJU8hdZxQAAAABJRU5ErkJggg=="/>
+        </svg>
+        پشتیبانی
+      </router-link>
+      <router-link to="/listCategoryPage" class="list-group-item list-group-item-action" :class="{active: $route.path == '/listCategoryPage' ? true : false}">
+        <!-- <i class="material-icons">insert_emoticon</i> -->
+        <svg id="agreement" width="20" height="20" viewBox="0 0 20 20">
+          <image width="20" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAACEElEQVQ4jY3VTYiNYRQH8N9cQyQlDTKUFLGZhcbShrDwtfDNYigLMks1E5GVNKWxUEoRQkTkc/JRRBY+lmyUWWAxGEoWKMzo1Ln1Gu+9M//Vfc9zzv9/znnOeW5Da2urxBi0YRVmoB8PcRxf/Y/Z2I1FmIL3uIUj+BzeVfJwvIl5JSThuBaPC7ZNOIWxJf4fM8EXFUzAvRrEgaY8X53f23G+BnFgalYweVRzc3MH1tRwrKIx2zQr29QwjP94DFZGQBw4itc4hj68KvH5MeR7eWQ0cxjiLrxN4nfYikhqcw7AAE7jCc4V4porWW494v4k7sVSLMAd/MYGrE+xM0Ni+xpz3OaWEEc2X3A4iSPjHpxANzqxs05iPZUM/l5yeBe7knhb4RIP5dx31SGO8e2uFIIHCofRio7MdiEu4GL69RYE9pUQf8u9+FBJw+U0/MIfbMnfj3AgyaanQFtOS9gGsWcI8bLqwlUKB9ewLiu4gv14nn1twQ5Mw6VcpBA4iIkpUCV+ViUskgdupMC4rCYEnqbA/GxTCNxGewp0ZpUtReIy8jKBvTlRIbAk+z4pq2vPsfyZO/APGmvcdgiswPVs18a0R+ajUyBG9STm1OCoSR64j5X5CF3NhZGXLc+a6sSXtqWIB0kSiIuM5QlbCLzB2XrBxT+LelicFQTiCYjJeDlc0HCZVxHZxmV+ind6JMTwFxRvf42nJZbjAAAAAElFTkSuQmCC"/>
+        </svg>
+        درخواست همکاری
+      </router-link>
+      <router-link to="/signIn" class="list-group-item list-group-item-action" :class="{active: $route.path == '/signIn' ? true : false}"><i class="material-icons">info</i>درباره ما</router-link>
     </div>
   </div>
   <!-- sidebar ends -->
@@ -66,7 +94,12 @@
 
 <script>
 export default {
-  name: "SideMenu"
+  name: "SideMenu",
+  methods: {
+    exit: function() {
+        alert('you are loged out');
+    }
+  }
 }
 </script>
 
@@ -135,6 +168,13 @@ export default {
 .sidebar .main-menu .list-group-item i{
   margin-right: -8px;
   margin-left: 13px;
+  color: #333;
+}
+.sidebar .main-menu .list-group-item svg{
+  margin-left: 16px;
+}
+#agreement{
+  margin-left: 15px;
 }
 .sidebar .main-menu .list-group-item {
   color: #333333;
@@ -181,5 +221,9 @@ export default {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+.sidebar .main-menu .list-group-item.active {
+  color: #000;
+  background-color: rgba(236,73,73, 0.1)
 }
 </style>

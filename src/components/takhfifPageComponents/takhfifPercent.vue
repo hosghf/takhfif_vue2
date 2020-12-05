@@ -9,7 +9,7 @@
             </span>
         </div>
         <div class="flex-right">
-            <span class="text-success discount" :class="{discountMedium: isMedium()}">
+            <span class="discount" :class="{discountMedium: isMedium()}">
                 {{secondPrice}}
             </span>
             <span class="text-muted price">
@@ -71,6 +71,7 @@ export default {
     font-size: 17px;
     font-weight: bold;
     margin: 0 6px;
+    color: #19c188;
 }
 .discountMedium {
     font-size: 15.5px;

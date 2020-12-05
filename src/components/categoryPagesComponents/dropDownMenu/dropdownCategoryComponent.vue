@@ -2,8 +2,10 @@
     <div class="dropdown m-1">
         <div class="categoryDropdown d-flex justify-content-between" :class="{active: active}" @click="expand">
             <div class="icon-box" :class="{activeLogo: active}">
-                <i class="material-icons">new_releases</i>
-                <!-- <img class="m-1" src="@/assets/img/category.png"> -->
+                <svg v-if="catsvg" :class="{category: active}" width="19" height="18" viewBox="0 0 512 512.002">
+                   <path id="Union_3" fill='#fff' data-name="Union 3" d="M5.859,506.146a20,20,0,0,1,0-28.285L91.715,392,5.859,306.146a20,20,0,0,1,28.282-28.285L120,363.716l85.86-85.86a20,20,0,0,1,28.281,28.29L148.285,392l85.856,85.855a20,20,0,1,1-28.281,28.285L120,420.286,34.141,506.146a20,20,0,0,1-28.282,0ZM292,512a20,20,0,0,1-14.141-34.145l200-200A20,20,0,0,1,512,292V492a20,20,0,0,1-20,20ZM272,120A120,120,0,1,1,392,240,120.136,120.136,0,0,1,272,120ZM20,240A20,20,0,0,1,0,220V20A20,20,0,0,1,20,0H220a20,20,0,0,1,20,20V220a20,20,0,0,1-20,20Z"/>
+                </svg>
+                <i v-else class="material-icons">new_releases</i>
             </div>
             <span class="text-center mt-1">
                 {{title}} 
@@ -52,7 +54,6 @@
     color: #f15252;
 }
 
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -82,10 +83,6 @@
 
 .dropdown-content a:hover {background-color: #ccc; color:#f15252}
 
-/* .dropdown:hover .dropdown-content {
-  display: block;
-} */
-
 .active{
     background: #f15252;
     color: #fff;
@@ -98,6 +95,14 @@
 .display{
     display: block;
 }
+.category path{
+    fill: #f15252;
+}
+.icon-box svg{
+    margin-top: 2px;
+    margin-right: 2px ;
+}
+
 </style>
 
 <script>
@@ -114,7 +119,7 @@ export default {
             // this.display = !this.display;
         }
     },
-    props: ["title", "isopen", "display"]
+    props: ["title", "isopen", "display", 'catsvg']
    
 }
 </script>
